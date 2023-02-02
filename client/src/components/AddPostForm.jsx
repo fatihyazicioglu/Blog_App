@@ -66,25 +66,25 @@ const AddPostForm = ({ open, handleClose }) => {
           will send updates occasionally.
         </DialogContentText>
         <div className={classes.root}>
-          <form noValidate autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
+          <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
             <TextField
-              id="title"
-              label="Başlık"
-              name="title"
-              variant="outlined"
+              id='title'
+              label='Başlık'
+              name='title'
+              variant='outlined'
               className={classes.textField}
-              size="small"
+              size='small'
               inputRef={register}
               error={errors.title ? true : false}
               fullWidth
             />
             <TextField
-              id="subtitle"
-              label="Alt Başlık"
-              name="subtitle"
-              variant="outlined"
+              id='subtitle'
+              label='Alt Başlık'
+              name='subtitle'
+              variant='outlined'
               className={classes.textField}
-              size="small"
+              size='small'
               inputRef={register}
               error={errors.subtitle ? true : false}
               fullWidth
@@ -103,22 +103,22 @@ const AddPostForm = ({ open, handleClose }) => {
                   ))}
                 </Select>
               }
-              name="tag"
+              name='tag'
               control={control}
               error={errors.tag ? true : false}
               defaultValue={tags[0]}
             />
 
             <TextField
-              id="content"
-              label="İçerik"
-              name="content"
+              id='content'
+              label='İçerik'
+              name='content'
               multiline
-              size="small"
+              size='small'
               inputRef={register}
               rows={4}
               className={classes.textField}
-              variant="outlined"
+              variant='outlined'
               error={errors.content ? true : false}
               fullWidth
             />
@@ -131,14 +131,14 @@ const AddPostForm = ({ open, handleClose }) => {
         </div>
       </DialogContent>
       <DialogActions>
-        <Button onClick={clearForm} color="inherit">
+        <Button onClick={clearForm} color='inherit'>
           Vazgeç
         </Button>
         <Button
-          type="submit"
+          type='submit'
           onClick={() => handleSubmit(onSubmit)()}
-          color="primary"
-          variant="outlined"
+          color='primary'
+          variant='outlined'
         >
           Yayınla
         </Button>

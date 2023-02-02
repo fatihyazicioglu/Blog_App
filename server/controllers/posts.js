@@ -12,7 +12,7 @@ res.status(200).json(posts);
 };
 
 export const createPost = async (req, res) => {
-    const post = req.body;
+    // const post = req.body;
     const newPost = new Post(post);
     try {
       await newPost.save();
