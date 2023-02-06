@@ -4,9 +4,7 @@ import { fetchPosts } from "./actions/post";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
+ 
 } from "react-router-dom";
 import {
   CssBaseline,
@@ -20,9 +18,9 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/MenuBook";
 import PenIcon from "@material-ui/icons/Create";
-import PostsList from "./components/PostsList";
+// import PostsList from "./components/PostsList";
 import AddPostForm from "./components/AddPostForm";
-import PostDetails from "./components/PostDetails";
+// import PostDetails from "./components/PostDetails";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -92,10 +90,10 @@ const App = () => {
         <Grid container className={classes.container}>
           <Grid item xs={12}>
             <Router>
-              {/* <Switch>
-                <Route exact path="/posts" component={PostsList} />
-                <Route exact path="/posts/:id" component={PostDetails} />
-              </Switch> */}
+            {/* <Switch> */}
+                {/* <Route exact path="/posts" component={PostsList} /> */}
+                {/* <Route exact path="/posts/:id" component={PostDetails} /> */}
+              {/* </Switch> */}
               {/* <Redirect from="/" to="/posts" /> */}
             </Router>
           </Grid>
