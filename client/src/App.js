@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchPosts } from "./actions/post";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  BrowserRouter as Router,
- 
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes ,Navigate} from "react-router-dom";
 import {
   CssBaseline,
   Container,
@@ -14,13 +11,13 @@ import {
   Toolbar,
   Typography,
   Button,
-  IconButton,
+ IconButton,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/MenuBook";
 import PenIcon from "@material-ui/icons/Create";
-// import PostsList from "./components/PostsList";
+import PostsList from "./components/PostsList";
 import AddPostForm from "./components/AddPostForm";
-// import PostDetails from "./components/PostDetails";
+import PostDetails from "./components/PostDetails";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,10 +87,11 @@ const App = () => {
         <Grid container className={classes.container}>
           <Grid item xs={12}>
             <Router>
-            {/* <Switch> */}
-                {/* <Route exact path="/posts" component={PostsList} /> */}
-                {/* <Route exact path="/posts/:id" component={PostDetails} /> */}
-              {/* </Switch> */}
+            <Routes>
+                <Route exact path="/posts" component={PostsList} />
+                <Route exact path="/posts/:id" component={PostDetails} />
+                <Route path="/" element={<Navigate to="/posts" />} />
+              </Routes>
               {/* <Redirect from="/" to="/posts" /> */}
             </Router>
           </Grid>

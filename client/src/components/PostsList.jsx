@@ -26,7 +26,7 @@ const PostsList = () => {
 
   return (
     <>
-      {/* Layout Shifter */}
+      Layout Shifter
       <div className={classes.layoutShifter}>
         <Button
           variant="text"

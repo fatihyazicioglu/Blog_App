@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import noImage from "../images/noimage.svg";
 import { Link } from "react-router-dom";
+import moment from 'moment';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,9 +38,9 @@ const useStyles = makeStyles((theme) => ({
 const Post = ({ _id, title, subtitle, content, tag, image, createdAt }) => {
   const classes = useStyles();
 
-  // const convertRelativeTime = (date) => {
-  //   return moment(date).fromNow();
-  // };
+  const convertRelativeTime = (date) => {
+    return moment(date).fromNow();
+  };
 
   return (
     <Card className={classes.root}>
@@ -51,7 +52,7 @@ const Post = ({ _id, title, subtitle, content, tag, image, createdAt }) => {
       <div className={classes.overlay}>
         <Typography variant="h6">Didem</Typography>
         <Typography variant="body2">
-          {/* {convertRelativeTime(createdAt)} */}
+          {convertRelativeTime(createdAt)}
         </Typography>
       </div>
       <CardContent>
